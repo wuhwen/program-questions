@@ -1,1 +1,14 @@
 1月12日 537.复数乘法
+  我的代码：
+  class Solution:
+    def complexNumberMultiply(self, a: str, b: str) -> str:
+        list1 = a[:-1].split("+")
+        list2 = b[:-1].split("+")
+        print(list1)
+        print(list2)
+        print(int(list1[0])*int(list2[0])-int(list1[1])*int(list1[1]))
+        list3=[]
+        list3.append((int(list1[0])*int(list2[0])) - (int(list1[1])*int(list2[1])))
+        list3.append( int(list1[1])*int(list2[0]) + int(list1[0])*int(list2[1]) )
+        print (list3[0])
+        return str(list3[0]) + '+' + str(list3[1]) + 'i'
